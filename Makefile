@@ -206,6 +206,8 @@ HEADERS=			\
 	kvm_timer.h		\
 	kvm_types.h		\
 	kvm_vmx.h		\
+	kvm_svm.h		\
+	kvm_glue_alloc.h	\
 	kvm_x86host.h		\
 	kvm_x86impl.h		\
 	kvm_x86.h
@@ -229,6 +231,8 @@ HDRCHK_SYSHDRS=			\
 	kvm_timer.h		\
 	kvm_types.h		\
 	kvm_vmx.h		\
+	kvm_svm.h		\
+	kvm_glue_alloc.h	\
 	kvm_x86host.h		\
 	kvm_x86impl.h
 
@@ -243,6 +247,11 @@ KMOD_SRCS =			\
 	kvm_iodev.c		\
 	kvm_ioapic.c		\
 	kvm_vmx.c		\
+<<<<<<< HEAD
+=======
+	kvm_svm.c		\
+	kvm_glue_alloc.c	\
+>>>>>>> jclulow/pre-ept-2
 	kvm_i8259.c		\
 	kvm_coalesced_mmio.c	\
 	kvm_irq_comm.c		\
