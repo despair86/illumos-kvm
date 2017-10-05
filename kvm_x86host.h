@@ -17,11 +17,7 @@
  * GPL HEADER END
  *
  * Copyright 2011 various Linux Kernel contributors.
-<<<<<<< HEAD
  * Copyright (c) 2015 Joyent, Inc. All Rights Reserved.
-=======
- * Copyright (c) 2012 Joyent, Inc. All Rights Reserved.
->>>>>>> jclulow/pre-ept-2
  */
 
 #ifndef __KVM_X86_HOST_H

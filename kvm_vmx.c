@@ -13,11 +13,7 @@
  * This work is licensed under the terms of the GNU GPL, version 2.  See
  * the COPYING file in the top-level directory.
  *
-<<<<<<< HEAD
  * Copyright (c) 2015 Joyent, Inc. All rights reserved.
-=======
- * Copyright (c) 2012 Joyent, Inc. All rights reserved.
->>>>>>> jclulow/pre-ept-2
  */
 
 #include <sys/sysmacros.h>
@@ -1574,15 +1570,12 @@ alloc_kvm_area(void)
 }
 
 static void
-<<<<<<< HEAD
-=======
 free_vmcs(struct vmcs *vmcs)
 {
 	kmem_cache_free(kvm_vmcs_cache, vmcs);
 }
 
 static void
->>>>>>> jclulow/pre-ept-2
 free_kvm_area(void)
 {
 	int cpu;
@@ -4908,13 +4901,8 @@ vmx_destroy_vcpu(struct kvm_vcpu *vcpu)
 	vcpu_vmx_t *vmx = to_vmx(vcpu);
 
 	if (vmx->vmcs != NULL) {
-<<<<<<< HEAD
 		vcpu_clear(vmx);
 		kmem_free(vmx->vmcs, PAGESIZE);
-=======
-		__vcpu_clear(vmx);
-		kmem_cache_free(kvm_vmcs_cache, vmx->vmcs);
->>>>>>> jclulow/pre-ept-2
 		vmx->vmcs = NULL;
 	}
 	if (vmx->guest_msrs != NULL)

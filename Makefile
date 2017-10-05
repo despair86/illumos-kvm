@@ -247,11 +247,8 @@ KMOD_SRCS =			\
 	kvm_iodev.c		\
 	kvm_ioapic.c		\
 	kvm_vmx.c		\
-<<<<<<< HEAD
-=======
 	kvm_svm.c		\
 	kvm_glue_alloc.c	\
->>>>>>> jclulow/pre-ept-2
 	kvm_i8259.c		\
 	kvm_coalesced_mmio.c	\
 	kvm_irq_comm.c		\
