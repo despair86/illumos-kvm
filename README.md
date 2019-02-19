@@ -12,6 +12,34 @@ of stability-over-performance.
   -- Joshua M. Clulow (freenode: LeftWing)
      <josh@sysmgr.org>
 
+### UPDATE (Feb 2019): 
+
+Now includes HMA integration for i687 FPU and Intel VMX
+patches committed since then. Specifically, the following change requests:
+
+
+```
+OS-6610 KVM should tolerate %cr3 changes
+OS-6998 KVM should use HMA FPU framework
+OS-7006 kvm leaks host %xcr0
+OS-7090 GDT limit reset to 0xffff
+OS-7125 Need mitigation of L1TF (CVE-2018-3646)
+OS-7102 expose pvclock to KVM guests
+OS-7174 KVM doesn't properly restore mxcsr post-HMA
+OS-7378 kvm build needs GCC fixes
+OS-7567 Clean up kvm usage of ctf tools
+```
+
+The HMA integration was necessary, as KVM no longer has complete control over
+the i687, the kernel will fall over if it tries to reset the FPU. The rest are
+security and quality updates.
+
+### TO DO:
+
+- Move AMD-V hardware VMM init code to UTS tree
+
+-rick
+
 illumos-kvm: KVM for illumos
 ============================
 
